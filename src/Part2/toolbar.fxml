@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<FlowPane xmlns:fx="Part2/toolbar.fxml" fx:controller="Part2.ToolBarController">
+    <fx:define>
+        <ToggleGroup fx:id="actionGroup"/>
+        <ToggleGroup fx:id="colorGroup"/>
+    </fx:define>
+    <ToolBar prefHeight="40.0" prefWidth="500" style="-fx-spacing: 12" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+        <HBox spacing="10">
+            <HBox spacing="5">
+                <ToggleButton id="greenButton" fx:id="greenButton" style="-fx-background-color: lightgreen;"  text="GREEN" onAction="#greenButtonClick" textFill="black" toggleGroup="$colorGroup">
+                </ToggleButton>
+                <ToggleButton id="redButton" fx:id="redButton"  style="-fx-background-color: salmon;" text="RED" onAction="#redButtonClick" textFill="black" toggleGroup="$colorGroup" selected="true">
+                </ToggleButton>
+                <ToggleButton id="blueButton" fx:id="blueButton"  style="-fx-background-color: lightskyblue;" text="BLUE" onAction="#blueButtonClick" textFill="black" toggleGroup="$colorGroup">
+                </ToggleButton>
+            </HBox>
+            <HBox spacing="5">
+                <ToggleButton fx:id="createButton" text="create" toggleGroup="$actionGroup" selected="true" onAction="#createButtonClick">
+                </ToggleButton>
+                <ToggleButton fx:id="deleteButton" text="delete" toggleGroup="$actionGroup" onAction="#deleteButtonClick">
+                </ToggleButton>
+            </HBox>
+        </HBox>
+    </ToolBar>
+    </FlowPane>
